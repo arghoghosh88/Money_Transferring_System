@@ -90,6 +90,7 @@ This project demonstrates **Object-Oriented Programming (OOP)** concepts, **file
 ## Conclusion
 
 The AK Money Transferring System demonstrates how a basic mobile wallet can be implemented using C++. This project improves understanding of **OOP**, **file handling**, and **user interaction** while providing a functional and secure simulation of digital transactions.
-**Prepared by:**  
-**Argho Ghosh**  
+---
+**Prepared by:** <br> 
+**Argho Ghosh**  <br>
 **Student of CSE, BUBT**
