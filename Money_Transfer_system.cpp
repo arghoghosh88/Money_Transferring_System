@@ -12,7 +12,10 @@ private:
     double balance;
 
 public:
-    user() {}//Default constructor
+    user() 
+    {
+        
+    }//Default constructor
 
     //---- Setter & getter method to set values -----
 
@@ -119,6 +122,7 @@ public:
         {
             cout<<"Now you can change your pin "<<endl;
             string np;
+            
             cout<<"Enter your new pin : ";
 
             char c;
@@ -136,8 +140,11 @@ public:
                 cout<<"*";
                 i++;
             }
+            
             set_pin(np);
+            
             updateFile();
+            
         }
     }
 
@@ -188,21 +195,25 @@ public:
                 cout<<"Invalid Pin"<<endl;
             }
         }
+            
         else if(c == 2)
         {
             cout<<"Your name : "<<get_name()<<endl;
             cout<<"Your Number : "<<get_PNum()<<endl;
             cout<<"Your current balance : "<<get_balance()<<endl;
         }
+            
         else if(c == 3)
         {
             cout<<"Call at '999'"<<endl;
         }
+            
         else if(c == 4)
         {
             int b;
             Choice(b);
         }
+            
         else
         {
             cout<<"Invalid input "<<endl;
@@ -211,6 +222,7 @@ public:
     }
 
 //---- This function is for cash out section ---
+
 void cash_out()
 {
     string rnum;
@@ -587,8 +599,10 @@ int main()
     cout<<"---< Welcome to AK Money Transferring system >---"<<endl;
     cout<<"Choose one "<<endl;
     cout<<"If you have any account then press 'Y' Otherwise press 'N'."<<endl;
+    
     char ce;
     cin>>ce;
+    
     if(ce  == 'Y' || ce == 'y')
     {
         user s2;
@@ -612,11 +626,15 @@ int main()
             cout<<"*";
             i++;
         }
+        
         cout<<endl;
         int c1;
+        
         s2.LoginFile(number, pn);
+        
         s2.Choice(c1);
     }
+    
     int n;
     cout<<"Enter the value of n : ";
     cin>>n;
@@ -625,25 +643,31 @@ int main()
 
     for(int j=0; j<n; j++)
     {
+        
         string name;
         cout<<"Enter your name : ";
+        
         cin.ignore();
         getline(cin,name);
 
         string pn;
         cout<<"Set your pin : ";
+        
         char c;
         int i=0;
 
         while(i<7)
         {
             c = getch();
+            
             if(c == 13)
             {
                 break;
             }
             pn += c;
+            
             cout<<"*";
+            
             i++;
         }
 
@@ -656,13 +680,17 @@ int main()
         cout<<"Enter your balance : ";
         cin>>bal;
 
-        s[j].set_name(name);
+        s[j].set_name(name)
+            ;
         s[j].set_PNum(number);
+        
         s[j].set_pin(pn);
+        
         s[j].set_balance(bal);
 
 
         int c1;
+        
         s[j].SaveInfoToFile();
 
         s[j].Choice(c1);
